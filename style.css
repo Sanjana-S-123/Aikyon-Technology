@@ -1,0 +1,1779 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+.logo {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.logo img{
+  
+    border-radius: 50%;
+    height:30px;
+    width:30px;
+    vertical-align: middle;
+}
+.logo span {
+  color: #FFD700;
+   
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+ 
+  text-decoration: none !important;
+   color:inherit;
+  font-size: 16px;
+  transition: color 0.3s;
+ 
+}
+nav ul li a:hover {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+/* --- New Dropdown Menu Styles --- */
+
+/* Parent for dropdown positioning */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* Base style for the main dropdown menu (Services) */
+.dropdown-menu {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100%; /* Position right below the 'Services' link */
+    left: 0;
+    min-width: 220px;
+    background: rgba(0,0,0,0.85); /* Dark background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 2000; /* Ensure it's on top of everything */
+    border-radius: 5px;
+}
+
+/* Show the main dropdown menu on hover */
+nav ul li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+/* ASIC.html */
+/* Dropdown menu items */
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    padding: 10px 0px;
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    /* Prevents text wrap */
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+
+/* --- Submenu (for Semiconductor Design) Styles --- */
+
+/* Hide the submenu by default */
+.submenu-items {
+    display: none;
+    position: absolute;
+    top: 0; 
+    right: 100%; /* Position to the right of the parent item */
+    min-width: 150px;
+    background: rgba(0,0,0,0.95); /* Slightly darker for depth */
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+    list-style: none;
+    padding: 0px 0;
+    border-radius: 5px;
+}
+
+/* Show the submenu on hover of its parent item */
+.dropdown-submenu:hover > .submenu-items {
+    display: block;
+}
+
+/* Ensure sub-services are vertically aligned */
+.dropdown-submenu {
+    position: relative; /* Needed to position the submenu */
+}
+
+/* Adjust the arrow link text */
+.dropdown-submenu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("background-image.jpeg") no-repeat center center/cover;
+  background-size: cover;
+  background-position: f;
+  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(163, 69, 69);
+  text-align: center;
+  width:100%;
+  overflow:hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+
+.hero-text{
+  width: 50%;
+  flex-shrink: 0;
+  padding:0 40px;
+  color: rgb(98, 81, 81);
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height:100vh;
+}
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+ color: #f1e9e2;
+}
+.hero-text p {
+    max-width:600px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FFD700;
+  margin-top:0 auto;
+  
+  word-wrap:break-word;
+}
+
+
+/* Container for the main section */
+.service-section {
+    padding: 100px 50px;
+    background-color: #f4f4f9; /* Light background */
+    text-align: center;
+    overflow: visible;
+    border-radius: 30px;
+    border:30px
+}
+h1{
+  margin-bottom: 40px;
+  color:#333;
+}
+
+/* index.html */
+/* Flex container for the two boxes */
+.service-container {
+    display: flex; /* Arranges boxes side-by-side */
+    gap: 30px; /* Space between the boxes */
+    max-width: 1200px;
+    margin: 0px auto ; /* Center the container */
+    border:30px; /* Border defines the long box */
+    border-radius: 40px;
+    overflow: visible; /* Ensures boxes align cleanly with the border radius */
+    box-shadow: none;
+    background:transparent;
+    
+}
+.service-box{
+border: 2px solid #00ffae;
+ border-radius: 10px;
+} 
+.service-box:hover {
+    transform: translateY(-10px) scale(1.05); /* Slightly lift and enlarge */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #f8f8f8; /* Optional: lighter background on hover */
+ border: 2px solid #007bff; 
+ border-radius: 10px;
+}
+.service-box img{
+  height:80px;
+  float: left;
+  border-radius: 30px;;
+}
+
+  .my-paragraph {
+    font-family: Arial, sans-serif;  /* Change font style */
+    font-size: 16px;                 /* Change font size */
+    color: #333333;                  /* Text color */
+    line-height: 1.5;                /* Spacing between lines */
+    text-align: justify;             /* Align text (left, right, center, justify) */
+    margin: 10px 0;                  /* Space above and below paragraph */
+}
+ 
+.service-box h2 {
+    color: #007bff; /* Blue title color */
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+/* THE HOVER EFFECT */
+.service-box:hover {
+    transform: translateY(-10px); /* Lifts the box up */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #e0f0ff; /* Light blue background change */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+}
+
+/* Optional: Specific styling for Semiconductor box on hover */
+#semiconductor:hover {
+    border-color: #ffc107;
+}
+
+/* Optional: Specific styling for Software box on hover */
+#software:hover {
+    border-color: #28a745;
+}
+
+
+
+
+/* New Why Choose Section Styling */
+        .why-choose-section-new {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 50px; /* Adjusted padding to match the image spacing */
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Lighter shadow as in image */
+            margin: 0 auto; /* Center the whole section */
+            text-align: center; /* Center main title and description */
+            
+        }
+
+        .section-title-new {
+            font-size: 36px; /* Slightly larger title */
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-title-new span {
+            color: #fbb034; /* Highlight color for company name */
+        }
+
+        .section-description-new {
+            font-size: 18px; /* Larger description text */
+            color: #555;
+            max-width: 800px; /* Constrain width of description */
+            margin: 0 auto 50px auto; /* Center and add space below */
+            line-height: 1.6;
+        }
+
+        .why-choose-content-new {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            gap: 60px; /* More space between text and image */
+            text-align: left; /* Reset text alignment for benefits list */
+        }
+
+        .benefits-list-new {
+            flex: 1.5; /* Give more space to the text list */
+        }
+
+        .benefit-new {
+            margin-bottom: 30px; /* Space between benefits */
+        }
+
+        .benefit-new h3 {
+            font-size: 24px; /* Larger benefit titles */
+            margin-bottom: 10px;
+            color: #333; /* Darker color for benefit titles */
+        }
+
+        .benefit-new p {
+            font-size: 16px;
+            color: #666; /* Slightly lighter text for descriptions */
+            line-height: 1.6;
+        }
+
+        .image-content-new {
+            flex: 1; /* Image takes remaining space */
+            display: flex; /* Use flex to center image vertically if needed */
+            align-items: center; /* Center image vertically */
+            justify-content: center; /* Center image horizontally */
+        }
+
+        .image-content-new img {
+            width: 100%;
+            height:100%;
+            max-width: 800px; /* Max width for the image */
+            border-radius: 15px; /* Slightly less rounded corners for the image */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Shadow for the image itself */
+        }
+
+        @media(max-width: 700px) {
+            .why-choose-section-new {
+                padding: 30px;
+                margin: 0 20px;
+            }
+            .why-choose-content-new {
+                flex-direction: column;
+                align-items: center; /* Center image when stacked */
+                gap: 40px;
+            }
+            .section-title-new {
+                font-size: 28px;
+            }
+            .section-description-new {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            .benefit-new h3 {
+                font-size: 20px;
+            }
+            .benefit-new p {
+                font-size: 14px;
+            }
+            .benefits-list-new, .image-content-new {
+                width: 100%; /* Take full width when stacked */
+                text-align: center; /* Center benefit text on small screens */
+            }
+            .image-content-new img {
+                max-width: 300px; /* Adjust image size on small screens */
+            }
+        }
+        /* Client Logos Section */
+.clients-section {
+    background-color: #f4f4f9; /* Light background */
+    padding: 80px 0 50px 0;
+    text-align: center;
+    overflow: hidden; /* Crucial to hide horizontal overflow */
+}
+.client-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.client-header p {
+    font-size: 18px;
+    color: #FFD700; /* Use your existing highlight color */
+    margin-bottom: 50px;
+}
+
+/* Logo Carousel Setup */
+.logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.logo-track {
+    display: flex; /* Makes all slides line up horizontally */
+    width: fit-content; /* Allows content to dictate width (essential for scrolling) */
+    animation: scroll-left 40s linear infinite; /* Apply the scroll animation */
+}
+
+.logo-track:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+.logo-slide {
+    flex-shrink: 0; /* Prevents logos from shrinking */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 180px; /* Fixed width for each slide container */
+    height: 100px;
+    margin: 0 20px;
+    background-color: #fff; /* White background for each logo box */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    filter: grayscale(100%); /* Makes logos consistent */
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.logo-slide:hover {
+     filter: grayscale(0%); /*Full color on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.logo-slide img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Continuous Scroll Keyframes (Left-to-Right) */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scrolls one full set of duplicated logos */
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #2c3e50; /* Dark navy color from the image */
+    color: white;
+    padding: 20px 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.footer-highlight {
+    color: #FFD700; /* Highlight the company name in the footer */
+}
+
+.social-icon a {
+    color: black;
+    background-color: #FFD700; /* Gold/yellow background for icon */
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .social-icon {
+        order: -1; /* Move icon to the top on mobile */
+    }
+    .logo-slide {
+        width: 120px;
+        height: 80px;
+        margin: 10 0px;
+    }
+}
+.footer-content img{
+  width:30px;
+  height:30px;
+}
+
+
+/* About.html */
+/* Reset and Base Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active {
+  border-bottom: 2px solid #00aced;
+}
+
+/* About Us Box */
+.about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px; /* adjust for fixed navbar */
+  background-color: #f5f5f5;
+  
+}
+.about-box h1{
+  color:whitesmoke;
+}
+
+
+
+.about-box {
+  background-color: #eb1b1b; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+font-size: 30px;
+  /* Background image */
+  background-image: url('/about bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  padding: 40px;
+  margin: 0; /* remove any extra margin */
+}
+
+
+/* Our Expertise and Description outside the box */
+.expert-section,
+.description-section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: left;
+ 
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.description-section{
+ border:2px solid red;
+   border-radius: 10px;
+}
+.description-section:hover {
+  color: rgb(18, 140, 61);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* shadow appears */
+}
+.description-section:active {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* shadow on click */
+  transform: translateY(-5px);               /* slightly smaller move */
+}
+.expert-section p {
+  font-weight: bold;
+  margin-bottom: 15px;
+ 
+  font-style: normal;
+}
+
+.description-section img{
+   height:150px;
+  float: left;
+  border-radius: 30px;;
+}
+.mission-vision-container {
+    display: flex; /* Enable Flexbox for side-by-side layout */
+    max-width: 1200px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Contains the image and content */
+}
+
+/* Left Panel: Image */
+.image-panel {
+    flex: 1; /* Take up roughly half the space */
+    min-width: 40%;
+}
+
+.image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+}
+
+/* Right Panel: Content */
+.content-panel {
+    flex: 1.2; /* Take up slightly more space for the text */
+    padding: 30px 40px;
+}
+
+/* Individual Content Item (Accordion Style) */
+.content-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.content-item:last-child {
+    border-bottom: none;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.item-header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Styling the active/expanded Mission title */
+.content-item.expanded .item-header h2 {
+    color: #007bff; /* Blue color for active item */
+}
+
+.item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Smooth slide effect */
+    padding-top: 0;
+}
+
+/* Styling for the open 'Mission' text */
+.content-item.expanded .item-body {
+    max-height: 300px; /* Needs to be larger than the content height */
+    padding-top: 15px;
+}
+
+.item-body p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.item-body p strong {
+    font-weight: 700;
+    color: #333;
+}
+
+.dropdown-icon {
+    font-size: 1.5em;
+    color: #888;
+}
+
+/* Rotate arrow icon for the open Mission panel */
+.content-item.expanded .dropdown-icon svg {
+    transform: rotate(180deg);
+}
+
+.dropdown-icon svg {
+    fill: #007bff;
+    transition: transform 0.3s;
+}
+
+/* Media Query for Mobile (Stacks content vertically) */
+@media (max-width: 900px) {
+    .mission-vision-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .image-panel {
+        min-width: 100%;
+        height: 300px; /* Fixed height for image on mobile */
+    }
+
+    .content-panel {
+        padding: 20px;
+    }
+}
+
+
+
+/* contact.html */
+.contact-box {
+  background-color: #ffffff; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+font-size: 30px;
+  /* Background image */
+  background-image: url('/contact.jpeg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  padding: 40px;
+  margin: 0; /* remove any extra margin */
+}
+
+.contact-main {
+            width: 100%;
+            height: 300px;
+            
+            /* Placeholder Background (Replace with your actual image URL) */
+            background: url('https://placehold.co/1200x300/212741/fff?text=Contact+Background+Image') no-repeat center center/cover;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dark Overlay for Banner */
+        .contact-main::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(33, 39, 65, 0.7); /* Dark background overlay */
+            z-index: 1;
+        }
+
+        .contact-box {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            
+  background-color: #ffffff; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+font-size: 30px;
+  /* Background image */
+  background-image: url('/about bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  padding: 40px;
+  margin: 0; /* remove any extra margin */
+}
+        
+
+        .contact-box h1 {
+            color: white;
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- 2. Side-by-Side Content Container --- */
+
+        .container {
+            display: flex; /* Activate Flexbox for side-by-side */
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            gap: 30px;
+        }
+
+        /* Styling for the introductory text box container (Flex Item 1) */
+        .container-contact {
+            flex: 2; /* Takes more space than the map */
+            
+            /* Light, semi-transparent background (as specified by your RGB value) */
+            background-color: rgba(226, 228, 231, 0.85); 
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-contact h3 {
+            color: #212741; /* Dark heading color */
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(33, 39, 65, 0.1);
+        }
+
+        .container-contact p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* Styling for the contact links (replacing inline styles) */
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Spacing between the links */
+            margin-top: 20px;
+        }
+
+        .contact-link {
+            /* Ensures text is NOT blue and icon/text are side-by-side */
+            color: #212741; /* Dark color for the text */
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #007bff; /* Optional hover effect */
+        }
+
+        .contact-link i {
+            /* Styling for the Font Awesome icons */
+            color: #007bff; /* Blue color for the icon */
+            font-size: 1.2em;
+            width: 30px; /* Fixed width for alignment */
+            margin-right: 10px;
+            text-align: center;
+        }
+        .contact-link img{
+          height:30px;
+          width:30px;
+        }
+        /* 3. Styling the map section container (Flex Item 2) */
+        .map {
+            flex: 1.5; /* Takes slightly less space */
+            align-self: stretch; /* Stretches to match the height of .container-contact (if content height varies) */
+            background-color: white; /* Give the map background */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* To contain the iframe's border-radius */
+        }
+
+        #map iframe {
+            width: 100%;
+            height: 100%; /* Fill the height of the parent .map container */
+            min-height: 350px; /* Minimum height for readability */
+            border: 0;
+            display: block;
+        }
+
+        /* --- Responsive Layout for Mobile --- */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column; /* Stack columns vertically on small screens */
+                align-items: center;
+                gap: 20px;
+            }
+
+            .container-contact,
+            .map {
+                flex: none; /* Reset flex properties */
+                width: 100%; /* Make them take full width */
+                max-width: 600px; /* Limit overall width */
+            }
+            
+            .contact-main {
+                height: 200px;
+            }
+            .contact-box h1 {
+                font-size: 2em;
+            }
+        }
+
+
+       /* ASIC.html */
+
+.animated-text {
+position: relative;
+            z-index: 2;
+            /* text-align: center; */
+            
+  background-color: #b88a8a; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100%;
+  height: 100%;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+
+  /* Background image */
+  background-image: url('/about bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  font-size: medium;
+  padding: 100px;
+  margin: 0; /* remove any extra margin */
+   background-color: rgba(0, 0, 0, 0.4); /* subtle overlay */
+  background-blend-mode: darken;
+
+  overflow: hidden;
+}
+.animated-text h1{
+font-size: 3rem;
+color: whitesmoke;
+}
+.asic-section {
+  padding: 60px 0;
+  color: rgb(11, 11, 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.asic-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  width: 90%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.asic-content:hover {
+  transform: translateY(-5px);
+}
+
+.asic-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.asic-image img {
+  width: 1200wh;
+  height: 60vh;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.asic-image:hover img {
+  transform: scale(1.05);
+}
+
+.asic-text {
+  flex: 1;
+  position: relative;
+}
+
+.asic-text h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.asic-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.more-info {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(225, 185, 185, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.asic-text:hover .more-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.asic-text:hover h2 {
+  color: #ffcc00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 900px) {
+  .asic-content {
+    flex-direction: column; /* Stack vertically */
+    text-align: center;
+  }
+
+  .asic-text {
+    margin-top: 20px;
+  }
+
+  .asic-text h2 {
+    font-size: 26px;
+  }
+
+  .asic-text p {
+    font-size: 15px;
+  }
+
+  .asic-image img {
+    border-radius: 20px;
+  }
+}
+
+
+/* RTL Section */
+.rtl-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rtl-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #222;
+    transition: transform 0.3s ease;
+}
+
+/* RTL Container */
+.rtl-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* RTL Row (Alternating Layout) */
+.rtl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reverse row for alternating left/right alignment */
+.rtl-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.rtl-image {
+    flex: 1;
+    padding: 10px;
+    max-width: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rtl-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Hover effect for images */
+.rtl-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.rtl-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.rtl-text h3 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.rtl-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Hover effect for text */
+.rtl-text:hover h3 {
+    color: #007bff;
+}
+
+/* Hover effect for text */
+.rtl-text:hover p {
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .rtl-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .rtl-reverse {
+        flex-direction: column;
+    }
+    .rtl-image {
+        max-width: 100%;
+    }
+    .rtl-text {
+        text-align: center;
+    }
+    .rtl-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rtl-title {
+        font-size: 28px;
+    }
+    .rtl-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .rtl-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 20px;
+  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+li:hover>.sub-menu {
+  display: block;
+}
+
+/* Adjust submenu for mobile */
+@media (max-width: 768px) {
+  .sub-menu {
+    position: absolute;
+    left:65%;
+    transform: translateX(-30%);
+    background: #2a2e45;
+    padding: 10px 15px;
+    border-radius: 2px;
+    width: max-content;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .sub-menu.active {
+    display: block;
+  }
+}
+
+
+/* Embedded.html */
+.Embedded-box {
+position: relative;
+            z-index: 2;
+            text-align: center;
+            font-size: large;
+            
+  background-color: #ffffff; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+
+  /* Background image */
+  background-image: url('/about bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  padding: 60px;
+  margin: 0; /* remove any extra margin */
+   background-color: rgba(0, 0, 0, 0.3); /* subtle overlay */
+  background-blend-mode: darken;
+
+  overflow: hidden;
+  
+}
+.Embedded-box h1{
+  font-size: 5rem;
+  color:whitesmoke
+}
+.embedded-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+.embedded-section h3 {
+  color: #212741;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.embedded-section h4 {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab:hover { background: #0056b3; }
+.tab.active { background: #212741; }
+
+.content {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: auto;
+  animation: slideIn 0.5s ease;
+}
+
+.content.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .embedded-section h3 { font-size: 1.5rem; }
+  .tab { padding: 8px 15px; font-size: 0.9rem; }
+}
+
+
+
+/* fpga.html */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+.page-heading {
+  background: url('assets/images/fpga-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.animated-text {
+  font-size: 3rem;
+  font-weight: 600;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ---------- INTRO SECTION ---------- */
+.fpga-intro {
+  background: #eaeaec;
+  color: rgb(82, 67, 67);
+  padding: 80px 20px;
+}
+
+.fpga-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.fpga-img {
+  flex: 1;
+}
+
+.fpga-img img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.fpga-img:hover img { transform: scale(1.05); }
+
+.fpga-text {
+  flex: 1;
+}
+.fpga-text h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+.fpga-text p {
+  line-height: 1.6;
+}
+
+/* ---------- FEATURES ---------- */
+.fpga-features {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.fpga-features h2 {
+  font-size: 2.2rem;
+  color: #212741;
+  margin-bottom: 30px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.feature-box i {
+  font-size: 40px;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+.feature-box h3 {
+  font-size: 1.3rem;
+  color: #212741;
+  margin-bottom: 10px;
+}
+.feature-box p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #212741;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer h5 {
+  font-size: 1.5rem;
+}
+.footer span {
+  color: yellow;
+}
+.footer i {
+  font-size: 1.8rem;
+  color: yellow;
+  margin: 10px;
+  transition: 0.3s;
+}
+.footer i:hover { transform: scale(1.1); }
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .animated-text { font-size: 2rem; }
+  .fpga-container { flex-direction: column; }
+}
+
+
+.left-text-context{
+    height:30px;
+    width:40px;
+}
+
+
+
+/* software.html */
+.software{
+  position: relative;
+            z-index: 2;
+            text-align: center;
+            font-size: large;
+            
+  background-color: #ffffff; /* fallback color */
+  
+  /* Fullscreen */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox to center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+
+  /* Background image */
+  background-image: url('/about bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Text styling */
+  color: white;
+  text-align: center; /* centers text lines */
+  padding: 60px;
+  margin: 0; /* remove any extra margin */
+   background-color: rgba(0, 0, 0, 0.3); /* subtle overlay */
+  background-blend-mode: darken;
+
+  overflow: hidden;
+  
+}
+.software h1{
+  font-size: 3rem;
+  color:whitesmoke;
+}
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden; /* Ensures contents stay within the border radius */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            /* Allows content to stack vertically on small screens */
+            flex-wrap: wrap; 
+        }
+
+        .left-panel {
+            flex: 2; /* Gives the image more space */
+            min-width: 350px;
+            background-color:none; /* Base color matching the image background */
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .right-panel {
+            flex: 1; /* Gives the text slightly less space */
+            min-width: 300px;
+            background-color: #e0f7fa; /* Light green/blue background for the text */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: content-box;
+        }
+
+        
+        
+
+        .right-panel h2 {
+            font-size: 2em;
+            color: #1a1a1a;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .right-panel p {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+
+
+        /* Responsive adjustment for screens smaller than 800px */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column; /* Stack the panels vertically */
+            }
+
+            .left-panel, .right-panel {
+                min-width: 100%;
+                padding: 30px 20px;
+            }
+        }
+
+ .service {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles for the text and image containers */
+        .service .text, 
+        .service img {
+            flex: 1; /* Both items share the space equally */
+            min-width: 300px; /* Ensures stacking on smaller screens */
+        }
+
+        .service .text {
+            padding: 40px;
+        }
+
+        /* Image styling for responsiveness */
+        .service img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Text content styles */
+        .service h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service h3 i {
+            margin-right: 10px;
+            color: #28a745; /* Green color for the icon */
+        }
+
+        .service p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* --- REVERSE LAYOUT CLASS FIX (Using flex-direction: reverse) --- */
+        .service.reverse {
+            flex-direction: row-reverse; /* Puts the .text element on the right and <img> on the left */
+        }
+        
+        /* Media Query for Responsiveness (Stack vertically on small screens) */
+        @media (max-width: 768px) {
+            .service {
+                flex-direction: column; /* Stacks the text and image */
+            }
+
+            /* Reversing is no longer needed when stacked, so reset the order */
+            .service.reverse {
+                flex-direction: column;
+            }
+            
+            .service img {
+                /* Ensures the image is shown above the text when stacked (non-reverse order) */
+                order: -1; 
+            }
+            .service.reverse img {
+                /* Ensures the image is shown above the text when stacked (reverse order) */
+                order: -1; 
+            }
+        }
+
+/* Footer */
+.main-footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-content a img {
+  width: 30px;
+  margin-top: 10px;
+}
